@@ -1,0 +1,44 @@
+{
+  "name": "medusa-payment-remita",
+  "version": "1.0.0",
+  "description": "Production-grade Remita Checkout payment provider for Medusa v2",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "test": "node --import tsx/esm --test tests/*.test.ts",
+    "test:watch": "node --import tsx/esm --test --watch tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "medusa",
+    "medusa-v2",
+    "payment",
+    "remita",
+    "nigeria",
+    "checkout"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "peerDependencies": {
+    "@medusajs/framework": "^2.0.0"
+  },
+  "devDependencies": {
+    "@medusajs/framework": "^2.0.0",
+    "@types/node": "^20.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
